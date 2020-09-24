@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <script>
+    $(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+//function responseMessage(msg) {
+  //$('.success-box').fadeIn(200);  
+  //$('.success-box div.text-message').html("<span>" + msg + "</span>");
+//}
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <a class="navbar-brand" href="#">LOGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ABOUTUS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">OUR BRAND</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#">TESTIMONIAL</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><button class="nav_btn">GO NOW</button></a>
+      </li>     
+    </ul>
+  </div>  
+</nav>
+
+
+<div class="container-fluid">
+  <div class="slider">
+    <div class="middle-heading">
+      <div class="transparent-background"><h1 class="heading">PROMOTING OVERSEAS <span>EXPORT ACTIVITIES</span></h1></div></div>
+  </div>
+
+  <div class="middle-line">
+    <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  </div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+  <div class="grid container">
+    <h1 class="service-title">SUPERB SERVICES</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12 offset-md-1 box">
+          <div class="image-box"><img src="love.jpeg" alt="1"></div>
+        <h4>LOVE <b>DESIGN</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12 box">
+        <div class="image-box">
+        <img src="love.jpeg" alt="2"></div>
+        <h4>CREATIVE <b>IDEAS</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12 box">
+        <div class="image-box"><img src="love.jpeg" alt="3"></div>
+        <h4>LOVE <b>DESIGN</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12 offset-md-1 box">
+          <div class="image-box"><img src="love.jpeg" alt="4"></div>
+        <h4>LOVE <b>DESIGN</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12 box">
+          <div class="image-box"><img src="love.jpeg" alt="5"></div>
+        <h4>CREATIVE <b>IDEAS</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12 box">
+          <div class="image-box"><img src="love.jpeg" alt="6"></div>
+        <h4>LOVE <b>DESIGN</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500... <a href="#">more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row award_para">
+    <div class="col-md-5 col-sm-5 col-xs-12 image_part">
+      <img src="1.jpg" alt="">
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-12 content_part">
+      <h2><B>WE ARE </B>AWARD WINNER</h2>
+      <p class="para">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</p>
+      <P class="para_des">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500Lorem Ipsum is simply 
+dummy text of the printing and typesetting industry.</P>
+      <div class="Progress">
+        <div class="icon-box stock"><img src="stock-earnings.png" alt="share"/>
+        </div>
+        <div class="icon-box text_center">
+          <img src="creative.png" alt="creative"/>
+        </div>
+      </div>
+        <button class="btn-lg btn">GROW UP BUSINESS</button>
+        <button class="btn-lg btn">CREATIVE IDEAS</button>
+      
+    </div>
+  </div>
+  <section>
+  <div class="container">
+      <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="gallery-title">OUR PORTFOLIO</h1>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="btn1 btn-default filter-button" data-filter="all">All</button>
+            <button class="btn1 btn-default filter-button" data-filter="hdpe">Trade</button>
+            <button class="btn1 btn-default filter-button" data-filter="sprinkle">Buy & Sell</button>
+            <button class="btn1 btn-default filter-button" data-filter="spray">Event</button>
+        </div>
+      </div>
+        <br/>
+         <div class="row portfolio">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="portfolio1.jpg" class="img-responsive">
+                 <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="portfolio2.jpg" class="img-responsive">
+                <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="portfolio1.jpg" class="img-responsive">
+                <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="portfolio3.jpg" class="img-responsive">
+                <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="portfolio1.jpg" class="img-responsive">
+                <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="portfolio2.jpg" class="img-responsive">
+                <div class = "caption">
+                    <h4>Thumbnail label</h4>
+                    <p>Some sample text.</p>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+  </section>
+  <section>
+
+    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay 
+ 
+<div class="overlay"></div>-->
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+          <h2>CLIENT <span style="color:#EF3A24;"><B>REVIEW</B></span></h2>
+           <div class="img-box">
+          <img src="icons8-user-80.png" alt="profile"></div>        
+            <p class="text-caption">Get start your next awesome project</p>
+            <h3>John Deo, CEO company</h3> 
+          <fieldset class="rating">     
+        <input type="radio" name="stars" id="4_stars" value="4" >
+        <label class="stars" for="4_stars"></label>
+        <input type="radio" name="stars" id="3_stars" value="3" >
+        <label class="stars" for="3_stars"></label>
+        <input type="radio" name="stars" id="2_stars" value="2" >
+        <label class="stars" for="2_stars"></label>
+        <input type="radio" name="stars" id="1_stars" value="1" >
+        <label class="stars" for="1_stars"></label>
+        <input type="radio" name="stars" id="0_stars" value="0" required>
+        <label class="stars" for="0_stars"></label>
+    </fieldset>
+          </hgroup>
+        
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">        
+        <hgroup>
+          <h2>CLIENT <span style="color:#EF3A24;"><B>REVIEW</B></span></h2>
+          <div class="img-box">
+          <img src="icons8-user-80.png" alt="profile">
+        </div>        
+            <p class="text-caption">Get start your next awesome project</p>
+            <h3>John Deo, CEO company</h3>
+            <fieldset class="rating">     
+        <input type="radio" name="stars" id="4_stars" value="4" >
+        <label class="stars" for="4_stars"></label>
+        <input type="radio" name="stars" id="3_stars" value="3" >
+        <label class="stars" for="3_stars"></label>
+        <input type="radio" name="stars" id="2_stars" value="2" >
+        <label class="stars" for="2_stars"></label>
+        <input type="radio" name="stars" id="1_stars" value="1" >
+        <label class="stars" for="1_stars"></label>
+        <input type="radio" name="stars" id="0_stars" value="0" required>
+        <label class="stars" for="0_stars"></label>
+    </fieldset>
+        </hgroup>       
+        
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">        
+        <hgroup>
+          <h2>CLIENT <span style="color:#EF3A24;"><B>REVIEW</B></span></h2>
+            <div class="img-box">
+          <img src="icons8-user-80.png" alt="profile">
+        </div>        
+            <p class="text-caption">Get start your next awesome project</p>
+            <h3>John Deo, CEO company</h3>
+            <fieldset class="rating">     
+        <input type="radio" name="stars" id="4_stars" value="4" >
+        <label class="stars" for="4_stars"></label>
+        <input type="radio" name="stars" id="3_stars" value="3" >
+        <label class="stars" for="3_stars"></label>
+        <input type="radio" name="stars" id="2_stars" value="2" >
+        <label class="stars" for="2_stars"></label>
+        <input type="radio" name="stars" id="1_stars" value="1" >
+        <label class="stars" for="1_stars"></label>
+        <input type="radio" name="stars" id="0_stars" value="0" required>
+        <label class="stars" for="0_stars"></label>
+    </fieldset>
+        </hgroup>
+        
+      </div>
+    </div>
+  </div> 
+</div>
+  </section>
+<section class="bg-white">
+  <h1 class="gallery-title">OUR CLIENT</h1>
+  <div class="row client_row">
+    <div class="col-md-2 col-xs-6 client offset-md-1">
+    <img src="client1.jpg" alt="client1"></div>
+    <div class="col-md-2 col-xs-6 client">
+    <img src="client2.jpg" alt="client2"></div>
+    <div class="col-md-2 col-xs-6 client"><img src="client3.jpg" alt="client3"></div>
+    <div class="col-md-2 col-xs-6 client"><img src="client4.jpg" alt="client4"></div>
+    <div class="col-md-2 col-xs-6 client"><img src="client5.jpg" alt="client5"></div>
+  </div>
+</section>
+</body>
+</html>
+
+
