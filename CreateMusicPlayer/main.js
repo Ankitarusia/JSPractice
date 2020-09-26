@@ -49,36 +49,29 @@ updateTimer= setInterval(seekUpdate, 1000);
 
 current_track.addEventListener("ended", nextTrack);
 
-randombgColor();
+randombgImage();
 }
-
-/*function randombgColor()
-{
-let red = Math.floor(Math.random() * 256) + 64; 
-let green = Math.floor(Math.random() * 256) + 64; 
-let blue = Math.floor(Math.random() * 256) + 64; 
-  
-  // Construct a color withe the given values 
-  let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")"; 
-  
-  // Set the background to the new color 
-  document.body.style.background = bgColor; 
-} */
-/*function Random_bg_image(){
+function randombgImage(){
 var images = ['img/image1.jpg',
       'img/image2.jpg',
       'img/image3.jpg'];
 	
 	for (var i = 0; i < images.length; i++) {
 	if (track_index==i) {
-	document.body.style.backgroundImage= "url ("+images[i]+")";
+	 document.getElementById('banner').setAttribute("style", "background-image: url(" +images[i] + ");background-repeat: no-repeat;background-size: cover; background-position:50% 50% ");
 	
 	}
 	
 }}
+/* 
+function randombgColor() {
 
-*/
-
+   var imgCount = 3;
+   var dir = 'http://local.statamic.com/_themes/img/';
+   var randomCount = (Math.floor(Math.random() * imgCount));
+   var images = ['img/image1.jpg','img/image2.jpg','img/image3.jpg'];
+   document.getElementById('banner').setAttribute("style", "background-image: url("dir +images[randomCount] + ");background-repeat: no-repeat;background-size: cover cover");
+}
 function randombgColor()
 {
 let red = Math.floor(Math.random() * 256) + 64; 
@@ -87,7 +80,7 @@ let blue = Math.floor(Math.random() * 256) + 64;
   let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")"; 
   document.body.style.background = bgColor; 
 }
-
+ */
 var resetValues=function() { 
   curr_time.textContent='00:00'; 
   total_duration.textContent= "00:00"; 

@@ -1,29 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-body { 
-background-color: lightgreen; 
-
+body {
 font-family: 'Roboto',sans-serif;
-/* Smoothly transition the background color */
 transition: background-color .5s; 
 } 
-
-/* Using flex with the column direction to 
-align items in a vertical direction */
-.player { 
-height: 95vh; 
+.overlay{
+	width: 99%;
+	background: rgb(5 47 132 / 29%);
+	height: 98%;
+	position: absolute;
+	}
+.player {
 display: flex; 
 align-items: center; 
 flex-direction: column; 
-justify-content: center; 
+justify-content: center;
+position:relative;
 } 
 
-.details { 
-display: flex; 
-align-items: center; 
-flex-direction: column; 
-justify-content: center; 
-margin-top: 25px; 
-} 
+.details {display: flex;align-items: center;flex-direction: column;justify-content: center;margin-top: 25px;color: #fff;} 
 
 .track-art { 
 margin: 25px; 
@@ -33,10 +27,9 @@ background-image: URL(
 	"https://source.unsplash.com/Qrspubmx6kE/640x360"); 
 background-size: cover; 
 background-position: center; 
-border-radius: 15%; 
+border-radius: 50%; 
 } 
 
-/* Changing the font sizes to suitable ones */
 .now-playing { 
 font-size: 1rem; 
 } 
@@ -52,9 +45,6 @@ font-size: 3rem;
 .track-artist { 
 font-size: 1.5rem; 
 } 
-
-/* Using flex with the row direction to 
-align items in a horizontal direction */
 .buttons { 
 display: flex; 
 flex-direction: row; 
@@ -63,37 +53,21 @@ align-items: center;
 
 .playpause-track
 {
-	background: #ed2b45;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+	background: #fd0022;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 }
 .playpause-track, 
 .prev-track, 
-.next-track { 
-padding: 25px; 
-opacity: 0.8; 
-color: #eee;
-transition: opacity .2s; 
-} 
-
-/* Change the opacity when mouse is hovered */
+.next-track {padding: 25px;opacity: 0.8;color: #fff;transition: opacity .2s;} 
 .playpause-track:hover, 
 .prev-track:hover, 
 .next-track:hover { 
-opacity: 1.0; 
-} 
+opacity: 1.0;
+ }
+.slider_container {width: 75%;max-width: 400px;display: flex;justify-content: center;align-items: center;color: #fff;} 
 
-/* Define the slider width so that it scales properly */
-.slider_container { 
-width: 75%; 
-max-width: 400px; 
-display: flex; 
-justify-content: center; 
-align-items: center; 
-} 
-
-/* Modify the appearance of the slider */
 .seek_slider, .volume_slider { 
 -webkit-appearance: none; 
 -moz-appearance: none; 
@@ -105,7 +79,6 @@ opacity: 0.7;
 transition: opacity .2s; 
 } 
 
-/* Modify the appearance of the slider thumb */
 .seek_slider::-webkit-slider-thumb, 
 .volume_slider::-webkit-slider-thumb { 
 -webkit-appearance: none; 
@@ -117,8 +90,6 @@ background: white;
 cursor: pointer; 
 border-radius: 50%; 
 } 
-
-/* Change the opacity when mouse is hovered */
 .seek_slider:hover, 
 .volume_slider:hover { 
 opacity: 1.0; 
@@ -141,9 +112,6 @@ i.fa-volume-down,
 i.fa-volume-up { 
 padding: 10px; 
 } 
-
-/* Change the mouse cursor to a pointer 
-when hovered over */
 i.fa-play-circle, 
 i.fa-pause-circle, 
 i.fa-step-forward, 
