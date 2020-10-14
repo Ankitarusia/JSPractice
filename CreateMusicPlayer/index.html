@@ -1,20 +1,36 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+    <link rel="icon" href="http://example.com/favicon.png">	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
 <title>Music Player</title> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="style.css"> 
 </head> 
-<body id="banner"> 
-<div class="overlay"></div>
-<div class="player"> 
-
+<body> 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+<div class="overlay" id="banner"></div>
+<div class="player" > 
+	<h1 id="h1"></h1>
+	<P></P>
 	<div class="details"> 
-	<div class="now-playing">PLAYING x OF y</div> 
+	<!-- <div class="now-playing">PLAYING x OF y</div>  -->
 	<div class="track-art"></div> 
+	<div class="track-title text-truncate">
 	<div class="track-name">Track Name</div> 
 	<div class="track-artist">Track Artist</div> 
-	</div> 
+	</div>
 	<div class="buttons"> 
 	<div class="prev-track" onclick="previousTrack()"> 
 		<i class="fas fa-backward fa-2x"></i> 
@@ -27,18 +43,152 @@
 	</div> 
 	</div> 
 	<div class="slider_container"> 
-	<div class="current-time">00:00</div> 
-	<input type="range" min="1" max="100"
+	<div class="current-time">00:00</div>/ 
+	<div class="total-duration">00:00</div>
+	<input type="range" min="1" value="0" step="1" max="254.5852300000001"
 		value="0" class="seek_slider" onchange="seekTo()"> 
-	<div class="total-duration">00:00</div> 
 	</div> 
 	<div class="slider_container"> 
-	<i class="fa fa-volume-down"></i> 
-	<input type="range" min="1" max="100"
-		value="99" class="volume_slider" onchange="setVolume()"> 
-	<i class="fa fa-volume-up"></i> 
+		<div class="volume_icon"><i class="fa fa-volume-down"></i>
+		<input type="range" min="1" max="100"
+		value="50" class="volume_slider" onchange="setVolume()">  </div>
 	</div> 
 </div> 
+</div> 
+</div>	
+</div>
+</div>
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>New Releases</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="0">
+					<img src="./img/Beyhadh.jpg"></a>
+					<h4>Beyhadh</h4>
+					<p>Rahul Jain</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="1">
+					<img src="./img/ganesh.jpg"></a>
+					<h4>Vidhanharta</h4>
+					<p>Vidhanharta</p>
+				
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="2">
+					<img src="./img/Galliyan.jpg"></a>
+					<h4>Ek Villain - Galliyan</h4>
+					<p>Ankit Tiwari</p>
+				
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="3">
+					<img src="./img/teribaatorhai.jpg"></a>
+					<h4>Teri baat or hai</h4>
+					<p>Stebin Ben - Teri baat or hai</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="4">
+					<img src="./img/badanpesitare.jpg"></a>
+					<h4>Badan Pe Sitare</h4>
+					<p>Sehnoor - Badan Pe Sitare Ft. Asim Riaz & Sehnoor</p>
+				
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="5">
+					<img src="./img/humkotummilgaye.jpg"></a>
+					<h4>Humko Tum Mil Gaye</h4>
+					<p>Vishal Mishra - Humko Tum Mil Gaye</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="6">
+					<img src="./img/jaanbangaye.jpg"></a>
+					<h4>Jaan Ban Gaye</h4>
+					<p>Asees Kaur - Khuda Haafiz</p>
+				
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="7">
+					<img src="./img/kaisehua.jpg"></a>
+					<h4>Kaise Hua</h4>
+					<p>Kabir Singh</p>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Popular Song</h3>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/taylorswift.jpg"></a>
+					<h4>Taylor Swift</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/shapeofyou.jpg"></a>
+					<h4>Lorem ipsum</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/letmeloveyou.jpg"></a>
+					<h4>Let me Love you</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/intentions.jpg"></a>
+					<h4>Intentions</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/senorita.jpg"></a>
+					<h4>Lorem Ipsum</h4>
+			</div>
+			<div class="col-md-2">
+				<a href="javascript:void()" class="album-poster">
+					<img src="./img/Onmyway.jpg"></a>
+					<h4>Lorem Ipsum</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="aplayer"></div>
+<script type="text/javascript">
+	/*const ap = new APlayer({
+	container: document.getElementById('aplayer'),
+	listfolded: true,
+	audio:[{
+			name: "Adhi Adhi Raat", 
+		    artist: "Rahul Jain", 
+		    cover: "img/Beyhadh.jpg", 
+		    url: "Adhi Adhi Raat.mp3"
+		},{
+			name: "Adhi Adhi Raat", 
+		    artist: "Bilal Saeed", 
+		    cover: "img/image1.jpg", 
+		    url: "Adhi Adhi Raat.mp3"
+		},
+		{
+			name: "Ek Villain - Galliyan", 
+		    artist: "Ankit Tiwari", 
+		    cover: "img/image2.jpg", 
+		    url: "Ek Villain - Galliyan.mp3"
+		},
+		{
+			name: "Khud Ko Tere", 
+		    artist: "Mahalakshmi Iyer", 
+		    cover: "img/image3.jpg", 
+		    url: "Khud Ko Tere.mp3"
+		}
+]
+});*/
+
+</script>
 <script src="main.js"></script> 
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 </body> 
 </html>
